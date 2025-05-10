@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Feedback Form</title>
+</head>
+<body style="background-color:#06c9bf; font-family:Arial,sans-serif;margin:0;">
+<h1 style="text-align:center;color:#333;">Student Feedback Form</h1>
+<form action="#" method="post" style="background:#fff;max-width:600px;margin:20px auto;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);">
+<label for="name" style="font-weight:bold;">Full Name:</label><br>
+<input type="text" id="name" name="name" required style="width:100%;padding:8px;margin:5px 0 15px 0;"><br>
+<label for="email" style="font-weight:bold;">Email:</label><br>
+<input type="email" id="email" name="email" required style="width:100%;padding:8px;margin:5px 0 15px 0;"><br>
+<label style="font-weight:bold;">Gender:</label><br>
+<input type="radio" id="male" name="gender" value="Male"><label for="male"> Male</label>
+<input type="radio" id="female" name="gender" value="Female"><label for="female"> Female</label>
+<input type="radio" id="other" name="gender" value="Other"><label for="other"> Other</label><br><br>
+<label for="course" style="font-weight:bold;">Select your course:</label><br>
+<select id="course" name="course" style="width:100%;padding:8px;margin:5px 0 15px 0;">
+<option value="bca">BCA</option>
+<option value="bba">BBA</option>
+<option value="bsc">B.Sc</option>
+<option value="msc">M.Sc</option>
+<option value="mba">MBA</option>
+</select><br>
+<label style="font-weight:bold;">Facilities you liked:</label><br>
+<input type="checkbox" id="library" name="facilities[]" value="Library"><label for="library"> Library</label><br>
+<input type="checkbox" id="lab" name="facilities[]" value="Computer Lab"><label for="lab"> Computer Lab</label><br>
+<input type="checkbox" id="canteen" name="facilities[]" value="Canteen"><label for="canteen"> Canteen</label><br>
+<input type="checkbox" id="sports" name="facilities[]" value="Sports"><label for="sports"> Sports</label><br><br>
+<label for="comments" style="font-weight:bold;">Additional Comments:</label><br>
+<textarea id="comments" name="comments" rows="5" style="width:100%;padding:8px;margin:5px 0 15px 0;"></textarea><br>
+<input type="submit" value="Submit Feedback" style="background:#4CAF50;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+</form>
+</body>
+</html>
