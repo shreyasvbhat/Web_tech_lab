@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  background: #eef2f7;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  background: #3498db;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Font Styles */
+.serif { font-family: 'Times New Roman', serif; }
+.sans { font-family: Arial, sans-serif; }
+.mono { font-family: 'Courier New', monospace; }
+.cursive { font-family: 'Brush Script MT', cursive; }
+
+/* Background Repeat */
+.bg {
+  height: 200px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+}
+.repeat {
+  background: url('https://i.pinimg.com/736x/b4/eb/ae/b4ebaed11f39bfbf2d2a9754e995f3c2.jpg') repeat;
+}
+.no-repeat {
+  background: url('https://picsum.photos/seed/pattern2/600') no-repeat center/contain;
+}
+
+/* Link Styles */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #3498db;
+}
+a:visited { color: #8e44ad; }
+a:hover { color: #e74c3c; text-decoration: underline; }
+a:active { color: #2ecc71; }
+
+/* Visibility */
+.visible { visibility: visible; }
+.hidden { visibility: hidden; }

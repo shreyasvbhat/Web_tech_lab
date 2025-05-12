@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excellence Institute of Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Internal CSS */
+    .hero h1 { 
+      font-size: 3rem; 
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">EIT</div>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1>Shaping Future Leaders</h1>
+        <p>Excellence Institute of Technology provides world-class education and cutting-edge research opportunities.</p>
+        <a href="#programs" class="btn">Explore Programs</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+           alt="Students at campus" 
+           style="border-radius:8px;box-shadow:0 12px 24px rgba(0,0,0,0.2)">
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="grid">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Campus">
+        <div>
+          <h3>Our Mission</h3>
+          <p>We provide transformative education that prepares students to be leaders and innovators.</p>
+          <div class="stats">
+            <div class="card">
+              <p class="big">25+</p>
+              <p>Years of Excellence</p>
+            </div>
+            <div class="card">
+              <p class="big">15,000+</p>
+              <p>Alumni Worldwide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="section bg-light">
+    <div class="container">
+      <h2>Our Programs</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Computer Science</h3>
+          <p>Comprehensive program covering algorithms, software development, and AI.</p>
+          <a href="#" class="btn-outline">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Electrical Engineering</h3>
+          <p>Study power systems, electronics, control systems, and communication technology.</p>
+          <a href="#" class="btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="grid">
+        <div>
+          <h3>Visit Us</h3>
+          <p>123 Education Avenue, Knowledge City, TX 75001</p>
+          <h3>Email Us</h3>
+          <p>admissions@excellence.edu</p>
+        </div>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Excellence Institute of Technology</p>
+    </div>
+  </footer>
+</body>
+</html>
