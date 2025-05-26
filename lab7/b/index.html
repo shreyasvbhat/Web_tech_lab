@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Student Info Form</title> 
+    
+    <style> 
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+ 
+        .form-container { 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            width: 400px; 
+        } 
+ 
+        h2 { 
+            text-align: center; 
+            color: #333; 
+            margin-bottom: 25px; 
+        } 
+ 
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            color: #555; 
+        } 
+ 
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="color"], 
+        textarea { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            margin-bottom: 15px; 
+            font-size: 14px; 
+        } 
+ 
+        .gender-group { 
+            margin-bottom: 15px; 
+        } 
+ 
+        .gender-group input { 
+            margin-right: 8px; 
+        } 
+ 
+        button { 
+            background: #2980b9; 
+            color: #fff; 
+            border: none; 
+            padding: 12px; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            width: 100%; 
+        } 
+ 
+        button:hover { 
+            background: #1abc9c; 
+        } 
+ 
+        #output { 
+            margin-top: 20px; 
+            height: 120px; 
+        } 
+ 
+        .error { 
+            color: red; 
+            font-size: 13px; 
+            margin-bottom: 10px; 
+        } 
+ 
+    </style> 
+</head> 
+<body> 
+ 
+<div class="form-container"> 
+    <h2>Student Information Form</h2> 
+    <div id="errorMsg" class="error"></div> 
+    <label>Name:</label> 
+    <input type="text" id="name"> 
+ 
+    <label>Email:</label> 
+    <input type="email" id="email"> 
+ 
+    <label>Mobile No:</label> 
+    <input type="tel" id="mobile"> 
+ 
+    <label>Gender:</label> 
+    <div class="gender-group"> 
+        <input type="radio" name="gender" value="Male"> Male 
+        <input type="radio" name="gender" value="Female"> Female 
+    </div> 
+ 
+    <label>Favorite Color:</label> 
+    <input type="color" id="favColor"> 
+ 
+    <button onclick="validateAndDisplay()">Submit</button> 
+ 
+    <textarea id="output" readonly placeholder="Your info will appear here..."></textarea> 
+</div> 
+ 
+<script> 
+    function validateAndDisplay() { 
+        let name = document.getElementById("name").value.trim(); 
+        let email = document.getElementById("email").value.trim(); 
+        let mobile = document.getElementById("mobile").value.trim(); 
+        let genderElems = document.getElementsByName("gender"); 
+        let favColor = document.getElementById("favColor").value; 
+        let gender = ""; 
+        let errorMsg = document.getElementById("errorMsg"); 
+        errorMsg.innerHTML = ""; 
+ 
+        // Validate fields 
+        if (name === "" || email === "" || mobile === "") { 
+            errorMsg.innerHTML = "Please fill out all fields."; 
+            return; 
+        } 
+ 
+        // Validate email format 
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+        if (!emailPattern.test(email)) { 
+            errorMsg.innerHTML = "Enter a valid email address."; 
+            return; 
+        } 
+ 
+        // Validate mobile number format 
+        let mobilePattern = /^[0-9]{10}$/; 
+        if (!mobilePattern.test(mobile)) { 
+            errorMsg.innerHTML = "Enter a valid 10-digit mobile number."; 
+            return; 
+        } 
+ 
+        // Check selected gender 
+        for (let i = 0; i < genderElems.length; i++) { 
+            if (genderElems[i].checked) { 
+                gender = genderElems[i].value; 
+                break; 
+            } 
+        } 
+        if (gender === "") { 
+            errorMsg.innerHTML = "Please select your gender."; 
+            return; 
+        } 
+ 
+        // Combine data 
+let info = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nGender: 
+${gender}\nFavorite Color: ${favColor}`; 
+document.getElementById("output").value = info; 
+} 
+</script> 
+</body> 
+</html> 
