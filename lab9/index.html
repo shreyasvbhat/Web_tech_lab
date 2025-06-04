@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Registration Validation</title>
+    <style type="text/css">
+      body {
+        font-family: Arial, sans-serif;
+        background: #e3f2fd;
+        padding: 30px;
+        text-align: center;
+      }
+      h2 {
+        color: #1976d2;
+      }
+      form {
+        background: #fff;
+        padding: 20px;
+        display: inline-block;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="password"] {
+        padding: 8px;
+        margin: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="button"] {
+        background: #1976d2;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+    <script type="text/javascript">
+      function validate() {
+        var uid = document.getElementById("uid").value;
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+        var email = document.getElementById("email").value;
+
+        if (uid.length < 5 || uid.length > 12) {
+          alert("User ID must be 5-12 characters.");
+          return false;
+        }
+        if (!/^[A-Za-z ]{15,}$/.test(name)) {
+          alert("Name must be alphabets only & at least 15 characters.");
+          return false;
+        }
+        if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z0-9]).{8}$/.test(pass)) {
+          alert("Password must be 8 chars, incl. 1 uppercase, 1 special char.");
+          return false;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("Invalid Email.");
+          return;
+          false;
+        }
+
+        alert("Registration Successful!");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>User Registration</h2>
+    <form action="#">
+      <input type="text" id="uid" placeholder="User ID" /><br />
+      <input type="text" id="name" placeholder="Full Name" /><br />
+      <input type="password" id="pass" placeholder="Password" /><br />
+      <input type="text" id="email" placeholder="Email" /><br />
+      <input type="button" value="Register" onclick="validate()" />
+    </form>
+  </body>
+</html>
