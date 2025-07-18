@@ -58,8 +58,7 @@
         }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           alert("Invalid Email.");
-          return;
-          false;
+          return false;
         }
 
         alert("Registration Successful!");
