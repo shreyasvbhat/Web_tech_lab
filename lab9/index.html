@@ -48,8 +48,8 @@
           alert("User ID must be 5-12 characters.");
           return false;
         }
-        if (!/^[A-Za-z ]{15,}$/.test(name)) {
-          alert("Name must be alphabets only & at least 15 characters.");
+        if (!/^[A-Za-z ]{8,}$/.test(name)) {
+          alert("Name must be alphabets only & at least 8 characters.");
           return false;
         }
         if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z0-9]).{8}$/.test(pass)) {

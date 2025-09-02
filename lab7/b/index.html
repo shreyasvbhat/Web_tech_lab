@@ -1,9 +1,6 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
+<!DOCTYPE html>
+<head>
     <title>Student Info Form</title> 
-    
     <style> 
         body { 
             font-family: 'Segoe UI', sans-serif; 
@@ -14,7 +11,6 @@
             height: 100vh; 
             margin: 0; 
         } 
- 
         .form-container { 
             background: #fff; 
             padding: 30px; 
@@ -22,13 +18,11 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
             width: 400px; 
         } 
- 
         h2 { 
             text-align: center; 
             color: #333; 
             margin-bottom: 25px; 
         } 
- 
         label { 
             display: block; 
             margin-bottom: 8px; 
@@ -52,7 +46,6 @@
         .gender-group { 
             margin-bottom: 15px; 
         } 
- 
         .gender-group input { 
             margin-right: 8px; 
         } 
@@ -82,7 +75,6 @@
             font-size: 13px; 
             margin-bottom: 10px; 
         } 
- 
     </style> 
 </head> 
 <body> 
@@ -123,27 +115,23 @@
         let gender = ""; 
         let errorMsg = document.getElementById("errorMsg"); 
         errorMsg.innerHTML = ""; 
- 
         // Validate fields 
         if (name === "" || email === "" || mobile === "") { 
             errorMsg.innerHTML = "Please fill out all fields."; 
             return; 
         } 
- 
         // Validate email format 
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
         if (!emailPattern.test(email)) { 
             errorMsg.innerHTML = "Enter a valid email address."; 
             return; 
         } 
- 
         // Validate mobile number format 
         let mobilePattern = /^[0-9]{10}$/; 
         if (!mobilePattern.test(mobile)) { 
             errorMsg.innerHTML = "Enter a valid 10-digit mobile number."; 
             return; 
         } 
- 
         // Check selected gender 
         for (let i = 0; i < genderElems.length; i++) { 
             if (genderElems[i].checked) { 
@@ -155,7 +143,6 @@
             errorMsg.innerHTML = "Please select your gender."; 
             return; 
         } 
- 
         // Combine data 
 let info = `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nGender: 
 ${gender}\nFavorite Color: ${favColor}`; 
