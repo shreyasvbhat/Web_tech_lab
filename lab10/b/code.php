@@ -1,5 +1,4 @@
 <?php 
-  // PHP script to check if the number is prime 
   $result = ""; 
    
   if ($_SERVER["REQUEST_METHOD"] == "POST") { 

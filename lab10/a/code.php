@@ -13,7 +13,7 @@ padding: 50px; }
   </style> 
 </head> 
 <body> 
-  <h1>📅 Today's Date</h1> 
+  <h1>Today's Date</h1> 
   <p><?php echo $today; ?></p> 
 </body> 
 </html>

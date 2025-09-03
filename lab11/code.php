@@ -40,25 +40,17 @@
  
     <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-        // Retrieve the information from the form 
         $info = $_POST["info"]; 
- 
-        // Validate if the information is not empty 
         if (!empty($info)) { 
-            // Open a text file to store the information 
-$file = fopen("form.txt", "a"); // "a" mode for appending 
-// Write the information to the text file 
-fwrite($file, $info . "\n"); 
-// Close the file 
-fclose($file); 
-// Display a success message in an alert 
-echo "<script>alert('Information submitted successfully!\\n" . 
-htmlspecialchars($info) . "');</script>"; 
-} else { 
-// Display an error message in an alert if information is empty 
-echo "<script>alert('Please enter some information!');</script>"; 
-} 
-} 
+        $file = fopen("form.txt", "a");  
+        fwrite($file, $info . "\n"); 
+        fclose($file);  
+        echo "<script>alert('Information submitted successfully!\\n" . 
+        htmlspecialchars($info) . "');</script>"; 
+    } else { 
+    echo "<script>alert('Please enter some information!');</script>"; 
+    } 
+    } 
 ?> 
 </body> 
 </html> 
